@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+  <title>Show New Article</title>
+</head>
+<body>
+  <h1>The World At A Glance</h1>
+  <ul>
+    <% @articles.each do |article| %>
+      <li><p><%= article[:title] %> (<a href="/articles/<%= article[:title] %>"><%= article[:url] %></a>)</p>
+      <p><%= article[:description] %></p></li>
+    <% end %>
+  </ul>
+
+  <a href='/new'>Submit New Article</a>
+</body>
